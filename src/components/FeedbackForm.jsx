@@ -6,7 +6,8 @@ import Card from './shared/Card'
 import Button from './shared/Button'
 
 const FeedbackForm = () => {
-  const { addFeedback, feedbackEdit } = useContext(FeedbackContext)
+  const { addFeedback, feedbackEdit, updateFeedback } =
+    useContext(FeedbackContext)
 
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisabled] = useState(true)
@@ -22,7 +23,7 @@ const FeedbackForm = () => {
       }
 
       if (feedbackEdit?.edit === true) {
-        console.log(true)
+        updateFeedback(feedbackEdit?.item?.id, newFeedback)
       } else {
         addFeedback(newFeedback)
       }
@@ -52,7 +53,6 @@ const FeedbackForm = () => {
       setBtnDisabled(false)
       setText(feedbackEdit?.item?.text)
       setRating(feedbackEdit?.item?.rating)
-      console.log(text)
     }
     return
   }, [feedbackEdit])
