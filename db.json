@@ -1,5 +1,5 @@
 {
-  "feedback": [
+  "feedback_v1": [
     {
       "id": 1,
       "rating": 1,
@@ -16,7 +16,8 @@
       "text": "This is feedback item 3 coming from the backend"
     },
     {
-      "rate": "5",
+      "text": "adfasdadfadsfdfa",
+      "rating": 3,
       "id": 4
     }
   ]
